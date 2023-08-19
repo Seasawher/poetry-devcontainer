@@ -5,6 +5,7 @@ ARG USER=vscode
 
 RUN DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
+    && apt-get upgrade -y \
     && apt-get install -y build-essential --no-install-recommends make \
         ca-certificates \
         git \
@@ -22,7 +23,8 @@ RUN DEBIAN_FRONTEND=noninteractive \
         libxml2-dev \
         libxmlsec1-dev \
         libffi-dev \
-        liblzma-dev
+        liblzma-dev \
+        libgl1-mesa-dev
 
 # Python and poetry installation
 USER $USER
