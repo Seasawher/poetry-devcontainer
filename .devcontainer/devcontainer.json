@@ -3,7 +3,6 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    // onCreateでpoetry installを実行することにより，ビルドの待ち時間を減らす
     "onCreateCommand": "poetry install",
     // コンテナが立ち上がった時にすぐに git が使えるようにする
     "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",

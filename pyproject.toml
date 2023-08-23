@@ -4,12 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["UserName <sample@gmail.com>"]
 readme = "README.md"
-packages = [{include = "poetry_devcontainer"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-opencv-python = "^4.8.0.76"
-
 
 [build-system]
 requires = ["poetry-core"]
