@@ -1,9 +1,9 @@
 # Poetry Devcontainer
 
-Poetry を Devcontainer で使用するにあたって，様々な障害があります．
+There are various obstacles to using Poetry with Devcontainer.
 
-* Poetry はデフォルトで仮想環境を作成しますが，Docker を使用する場合はこれはオフにしたほうが良いです
-* ベースイメージによっては，Poetry が使用している Python 環境と，システムの Python 環境が食い違う問題が生ずることがあります．これが起きると `poetry add` したパッケージが使用できないという不具合が発生します．
-* Poetry をインストールした後，PATH が自動では通らないので自分で通す必要があります
+* Poetry creates a virtual environment by default, but this should be turned off when using Docker.
+* Depending on the base image, there may be a problem where the Python environment used by Poetry differs from the Python environment on the system. This will result in packages added with `poetry add` not being usable.
+* After installing Poetry, you need to update your PATH yourself as it is not automatically updated..
 
-このテンプレートを使用すると，上記のような問題はすでに解決済みですので，その解決に時間を割かずに済みます．
+With this template, the above problems have already been solved, so you don't have to spend time solving them. 👍

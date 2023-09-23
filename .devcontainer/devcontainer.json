@@ -4,7 +4,6 @@
         "dockerfile": "Dockerfile"
     },
     "onCreateCommand": "poetry install",
-    // コンテナが立ち上がった時にすぐに git が使えるようにする
     "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
     "customizations": {
         "vscode": {
@@ -14,9 +13,7 @@
                 "files.trimFinalNewlines": true,
                 "files.trimTrailingWhitespace": true,
                 "[python]": {
-                    // デフォルトのフォーマッタとしてBlackを選択
                     "editor.defaultFormatter": "ms-python.black-formatter",
-                    // Python 拡張が提供するフォーマッター連携は無効にしておく
                     "python.formatting.provider": "none"
                 }
             },
